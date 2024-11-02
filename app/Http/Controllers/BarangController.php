@@ -39,7 +39,7 @@ class BarangController extends Controller
 
         // Simpan data barang
         Barang::create($request->all());
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil ditambahkan');
+        return redirect()->route('barang.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class BarangController extends Controller
 
         // Update data barang
         $barang->update($request->all());
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil diperbarui');
+        return redirect()->route('barang.index');
     }
 
     /**
@@ -83,6 +83,6 @@ class BarangController extends Controller
     public function destroy(Barang $barang)
     {
         $barang->delete(); 
-        return redirect()->route('barang.index')->with('success', 'Barang berhasil dihapus');
+        return redirect()->route('barang.index');
     }
 }

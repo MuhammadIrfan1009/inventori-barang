@@ -7,36 +7,62 @@
     <form action="{{ route('barang.store') }}" method="POST">
         @csrf
 
-        <div class="form-group">
-            <label for="nama_barang">Nama Barang</label>
-            <input type="text" name="nama_barang" class="form-control" required>
-        </div>
+        <table class="table">
+            <tr>
+                <td>
+                    <label for="nama_barang">Nama Barang</label>
+                </td>
+                <td>
+                    <input type="text" name="nama_barang" class="form-control" required>
+                </td>
+            </tr>
 
-        <div class="form-group">
-            <label for="jenis_barang">Jenis Barang</label>
-            <input type="text" name="jenis_barang" class="form-control" required>
-        </div>
+            <tr>
+                <td>
+                    <label for="jenis_barang">Jenis Barang</label>
+                </td>
+                <td>
+                    <input type="text" name="jenis_barang" class="form-control" required>
+                </td>
+            </tr>
 
-        <div class="form-group">
-            <label for="stock">Stock</label>
-            <input type="text" name="stock" id="stock" class="form-control" pattern="\d*" title="Stok hanya boleh berupa angka." required>
-        </div>
+            <tr>
+                <td>
+                    <label for="stock">Stock</label>
+                </td>
+                <td>
+                    <input type="text" name="stock" id="stock" class="form-control" pattern="\d*" title="Stok hanya boleh berupa angka." required>
+                </td>
+            </tr>
 
-        <div class="form-group">
-            <label for="status">Status</label>
-            <select name="status" class="form-control">
-                <option value="">Pilih Status</option>
-                <option value="Tersedia">Tersedia</option>
-                <option value="Habis">Habis</option>
-            </select>
-        </div>
+            <tr>
+                <td>
+                    <label for="status">Status</label>
+                </td>
+                <td>
+                    <select name="status" class="form-control">
+                        <option value="">Pilih Status</option>
+                        <option value="Tersedia">Tersedia</option>
+                        <option value="Habis">Habis</option>
+                    </select>
+                </td>
+            </tr>
 
-        <div class="form-group">
-            <label for="harga_satuan">Harga Satuan</label>
-            <input type="number" name="harga_satuan" class="form-control" min="0">
-        </div>
+            <tr>
+                <td>
+                    <label for="harga_satuan">Harga Satuan</label>
+                </td>
+                <td>
+                    <input type="number" name="harga_satuan" class="form-control" min="0">
+                </td>
+            </tr>
 
-        <button type="submit" class="btn btn-primary">Simpan</button>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </td>
+            </tr>
+        </table>
     </form>
 </div>
 @endsection
